@@ -8,7 +8,7 @@ from predict import predict
 def do_args() -> argparse.Namespace:
     p = argparse.ArgumentParser(description="Linear Regression - Plot")
     p.add_argument("--data", required=True, help="Name of the data file")
-    p.add_argument("--save", required=True, help="Name of the save theta file")
+    p.add_argument("--theta", required=True, help="Name of the save theta file")
     args = p.parse_args()
     return args
 
@@ -39,7 +39,7 @@ def main():
     try:
         args = do_args()
         data = read_data(args.data)
-        theta_data = read_data(args.save)
+        theta_data = read_data(args.)
 
         km, price = format_data(data)
         theta0, theta1 = load_theta(theta_data)
